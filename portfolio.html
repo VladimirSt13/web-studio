@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio - Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Roboto:wght@400;500;700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav nav">
+        <a class="nav__logo logo" href="/"><span>Web</span>Studio</a>
+
+        <menu class="nav__list list">
+          <li class="nav__item item"><a class="nav__link link" href="/">Студія</a></li>
+          <li class="nav__item item"><a class="nav__link link active" href="">Портфоліо</a></li>
+          <li class="nav__item item"><a class="nav__link link" href="">Контакти</a></li>
+        </menu>
+      </nav>
+
+      <address class="header__address address">
+        <ul class="address__list list">
+          <li class="address__item item">
+            <a class="address__link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="address__item item">
+            <a class="address__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </address>
+    </header>
+
+    <main class="main">
+      <section class="portfolio">
+        <h1 class="portfolio__title visually-hidden">Portfolio</h1>
+
+        <form class="filter">
+          <label>
+            Усі
+            <input type="radio" name="filter" value="all" />
+          </label>
+          <label>
+            Веб сайти
+            <input type="radio" name="filter" value="web" />
+          </label>
+          <label>
+            Додатки
+            <input type="radio" name="filter" value="app" />
+          </label>
+          <label>
+            Дизайн
+            <input type="radio" name="filter" value="design" />
+          </label>
+          <label>
+            Маркетинг
+            <input type="radio" name="filter" value="marketing" />
+          </label>
+        </form>
+
+        <ul class="portfolio__list">
+          <li class="portfolio__item" data-project="web">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img.jpg" alt="Технокряк" width="370" />
+              <h2>Технокряк</h2>
+              <p>Веб-сайт</p>
+            </a>
+          </li>
+
+          <li class="portfolio__item" data-project="design">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img-1.jpg" alt="Постер New Orlean vs Golden Star" width="370" />
+              <h2>Постер New Orlean vs Golden Star</h2>
+              <p>Дизайн</p>
+            </a>
+          </li>
+
+          <li class="portfolio__item" data-project="app">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img-2.jpg" alt="Постер New Orlean vs Golden Star" width="370" />
+              <h2>Ресторан Seafood</h2>
+              <p>Додаток</p>
+            </a>
+          </li>
+
+          <li class="portfolio__item" data-project="marketing">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img-3.jpg" alt="Проєкт Prime" width="370" />
+              <h2>Проєкт Prime</h2>
+              <p>Маркетинг</p>
+            </a>
+          </li>
+
+          <li class="portfolio__item" data-project="app">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img-4.jpg" alt="Проєкт Boxes" width="370" />
+              <h2>Проєкт Boxes</h2>
+              <p>Додаток</p>
+            </a>
+          </li>
+
+          <li class="portfolio__item" data-project="web">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img-5.jpg" alt="Inspiration has no Borders" width="370" />
+              <h2>Inspiration has no Borders</h2>
+              <p>Веб-сайт</p>
+            </a>
+          </li>
+
+          <li class="portfolio__item" data-project="design">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img-6.jpg" alt="Видання Limited Edition" width="370" />
+              <h2>Видання Limited Edition</h2>
+              <p>Дизайн</p>
+            </a>
+          </li>
+
+          <li class="portfolio__item" data-project="marketing">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img-7.jpg" alt="Проєкт LAB" width="370" />
+              <h2>Проєкт LAB</h2>
+              <p>Маркетинг</p>
+            </a>
+          </li>
+
+          <li class="portfolio__item" data-project="app">
+            <a class="portfolio__link link card" href="">
+              <img src="img/portfolio/img-8.jpg" alt="Growing Business" width="370" />
+              <h2>Growing Business</h2>
+              <p>Додаток</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__logo logo" href="/"><span>Web</span>Studio</a>
+      <address class="footer__address address">
+        <ul class="address__list">
+          <li class="address__item item">
+            <a class="address__link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="address__item item">
+            <a class="address__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </address>
+    </footer>
+  </body>
+</html>

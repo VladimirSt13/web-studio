@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WebStudio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -11,11 +19,11 @@
       <nav class="header__nav nav">
         <a class="nav__logo logo" href="/"><span>Web</span>Studio</a>
 
-        <ul class="nav__list list">
-          <li class="nav__item item"><a class="nav__link link" href="/">Студія</a></li>
-          <li class="nav__item item"><a class="nav__link link" href="#">Портфоліо</a></li>
+        <menu class="nav__list list">
+          <li class="nav__item item"><a class="nav__link link active" href="">Студія</a></li>
+          <li class="nav__item item"><a class="nav__link link" href="./portfolio.html">Портфоліо</a></li>
           <li class="nav__item item"><a class="nav__link link" href="#">Контакти</a></li>
-        </ul>
+        </menu>
       </nav>
 
       <address class="header__address address">
@@ -31,12 +39,12 @@
     </header>
 
     <main class="main">
-      <section class="hero">
+      <section class="hero section">
         <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
         <button class="hero__button button" type="button">Замовити послугу</button>
       </section>
 
-      <section class="features">
+      <section class="features section">
         <h2 class="visually-hidden">Наші переваги</h2>
 
         <ul class="features__list">
@@ -61,8 +69,8 @@
         </ul>
       </section>
 
-      <section class="what-we-do">
-        <h2 class="what-we-do__title">Чим ми займаємося</h2>
+      <section class="what-we-do section">
+        <h2 class="what-we-do__title section__title">Чим ми займаємося</h2>
 
         <ul class="what-we-do__list list">
           <li class="what-we-do__item">
@@ -87,8 +95,8 @@
         </ul>
       </section>
 
-      <section class="our-team">
-        <h2 class="our-team__title">Наша команда</h2>
+      <section class="our-team section">
+        <h2 class="our-team__title section__title">Наша команда</h2>
 
         <ul class="our-team__list list">
           <li class="our-team__item team-member">
@@ -140,11 +148,16 @@
       <a class="footer__logo logo" href="/"><span>Web</span>Studio</a>
       <address class="footer__address address">
         <ul class="address__list">
-          <li class="address__item item">
-            <a class="address__link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <li class="address__item">
+            <a class="link link-map" href="https://maps.app.goo.gl/SjsjAe57UmDZUiKMA"
+              >м. Київ, пр-т Лесі Українки, 26</a
+            >
           </li>
-          <li class="address__item item">
-            <a class="address__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+          <li class="address__item">
+            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="address__item">
+            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
       </address>
