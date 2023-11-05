@@ -15,7 +15,13 @@
   --color-text-black: #000000;
 }
 
-* {
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -68,7 +74,11 @@ img {
 
 /* Section */
 .section {
+  padding-top: 5.875rem;
+  padding-bottom: 5.875rem;
   .section__title {
+    margin-bottom: 3rem;
+
     color: var(--color-text-primary-title);
     text-align: center;
     font-size: 2.25rem;
@@ -77,19 +87,61 @@ img {
   }
 }
 
+/* Container */
+.container {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 15px;
+}
+
 /* Header */
 .header {
+  border: 1px solid #ececec;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 6rem;
+  }
+
   .link {
+    display: block;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
     font-weight: 500;
     letter-spacing: 0.0175rem;
     &:hover,
-    &:focus {
+    &:focus,
+    &.active {
       color: var(--color-text-accent);
     }
+
+    &.active {
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    column-gap: 6rem;
+  }
+
+  .nav__list,
+  .address__list {
+    display: flex;
+    column-gap: 3rem;
+    row-gap: 1rem;
+
+    flex-wrap: wrap;
   }
 
   .nav__link {
     color: var(--color-text-primary-title);
+  }
+
+  .address {
   }
 
   .address__link {
@@ -102,10 +154,22 @@ img {
 
 .hero {
   background-color: var(--color-bg-secondary);
+  height: 600px;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 
   .hero__title {
-    color: var(--color-text-secondary-title);
+    max-width: 696px;
     text-align: center;
+
+    color: var(--color-text-secondary-title);
     font-size: 2.75rem;
     font-weight: 900;
     line-height: 1.36; /* 136.364% */
@@ -114,7 +178,6 @@ img {
   }
 
   .hero__button {
-    /* padding: 0.625rem 2rem; */
     width: 13.4375rem;
     height: 3.125rem;
     border-radius: 4px;
@@ -143,8 +206,17 @@ img {
 
 /* Features */
 
-.feature {
+.features {
+  &.section {
+    padding-bottom: 0;
+  }
+
   letter-spacing: 0.0262rem;
+
+  .features__list {
+    display: flex;
+    gap: 2rem;
+  }
 
   .feature__title {
     color: var(--color-text-primary-title);
@@ -163,6 +235,11 @@ img {
   .what-we-do__title {
   }
 
+  .what-we-do__list {
+    display: flex;
+    gap: 2rem;
+  }
+
   .what-we-do__item {
     img {
       width: 370px;
@@ -173,7 +250,13 @@ img {
 
 /* Our Team */
 .our-team {
+  background-color: var(--color-bg-accent);
   .our-team__title {
+  }
+
+  .our-team__list {
+    display: flex;
+    gap: 2rem;
   }
 
   .our-team__item {
@@ -182,9 +265,20 @@ img {
 
 .team-member {
   letter-spacing: 0.03rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
   .team-member__photo {
     width: 270px;
     height: 260px;
+  }
+
+  .team-member__content {
+    padding: 30px;
+    background-color: var(--color-bg-primary);
+    text-align: center;
   }
   .team-member__name {
     color: var(--color-text-primary-title);
@@ -201,9 +295,11 @@ img {
 /* Portfolio */
 .portfolio {
   .filter {
+    margin-bottom: 3rem;
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
     justify-content: center;
+
     .filter__label {
       display: block;
       padding: 0.6rem 1.375rem;
@@ -227,18 +323,32 @@ img {
   }
 
   .portfolio__list {
+    --num-items: 3;
+    --gap: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.875rem 1.875rem;
+    gap: var(--gap);
+
     .portfolio__item {
+      width: calc((100% - var(--gap) * (var(--num-items) - 1)) / var(--num-items));
     }
   }
 
   .card {
     font-family: inherit;
     .card__img {
-      width: 370px;
-      height: 294px;
+      width: 100%;
+      height: auto;
+    }
+
+    .card__content {
+      --border: 1px solid #eee;
+
+      padding: 1.25rem 1.5rem;
+      border-left: var(--border);
+      border-right: var(--border);
+      border-bottom: var(--border);
+      background-color: var(--color-bg-primary);
     }
     .card__name {
       color: var(--color-text-primary-title);
@@ -258,13 +368,23 @@ img {
 
 /* Footer */
 .footer {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
   background-color: var(--color-bg-secondary);
   .logo {
+    display: block;
     color: var(--color-text-secondary-title);
+    margin-bottom: 1.25rem;
   }
 
   .address {
     font-style: normal;
+
+    .address__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
 
     .link {
       color: var(--color-text-secondary-text);
