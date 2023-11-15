@@ -7,6 +7,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -15,7 +17,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="page-header" data-lock-padding>
       <div class="container">
         <nav class="header__nav nav">
           <a class="nav__logo logo" href="/"><span>Web</span>Studio</a>
@@ -54,7 +56,7 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero__button button" type="button">Замовити послугу</button>
+          <button class="hero__button button" type="button" data-action="open-modal">Замовити послугу</button>
         </div>
       </section>
 
@@ -123,9 +125,11 @@
 
           <ul class="what-we-do__list list">
             <li class="what-we-do__item">
+              <h3 class="what-we-do__subtitle">Десктопні додатки</h3>
               <img src="./img/what-we-do/what-we-do-1.jpg" alt="Робота з планшетом" width="370" height="294" />
             </li>
             <li class="what-we-do__item">
+              <h3 class="what-we-do__subtitle">Мобільні додатки</h3>
               <img
                 src="./img/what-we-do/what-we-do-2.jpg"
                 alt="Робота з мобільним телефоном та комп'ютером"
@@ -134,6 +138,7 @@
               />
             </li>
             <li class="what-we-do__item">
+              <h3 class="what-we-do__subtitle">Дизайнерські рішення</h3>
               <img
                 src="./img/what-we-do/what-we-do-3.jpg"
                 alt="Робота з планшетом та комп'ютером"
@@ -165,7 +170,7 @@
                 <ul class="team-member__social-list social-list list">
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-instagram"></use>
                       </svg>
                     </a>
@@ -173,7 +178,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-twitter"></use>
                       </svg>
                     </a>
@@ -181,7 +186,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-facebook"></use>
                       </svg>
                     </a>
@@ -189,7 +194,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-linkedin"></use>
                       </svg>
                     </a>
@@ -212,7 +217,7 @@
                 <ul class="team-member__social-list social-list list">
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-instagram"></use>
                       </svg>
                     </a>
@@ -220,7 +225,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-twitter"></use>
                       </svg>
                     </a>
@@ -228,7 +233,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-facebook"></use>
                       </svg>
                     </a>
@@ -236,7 +241,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-linkedin"></use>
                       </svg>
                     </a>
@@ -259,7 +264,7 @@
                 <ul class="team-member__social-list social-list list">
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-instagram"></use>
                       </svg>
                     </a>
@@ -267,7 +272,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-twitter"></use>
                       </svg>
                     </a>
@@ -275,7 +280,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-facebook"></use>
                       </svg>
                     </a>
@@ -283,7 +288,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-linkedin"></use>
                       </svg>
                     </a>
@@ -300,7 +305,7 @@
                 <ul class="team-member__social-list social-list list">
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-instagram"></use>
                       </svg>
                     </a>
@@ -308,7 +313,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-twitter"></use>
                       </svg>
                     </a>
@@ -316,7 +321,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-facebook"></use>
                       </svg>
                     </a>
@@ -324,7 +329,7 @@
 
                   <li class="social-list__item">
                     <a class="social-list__link" href="">
-                      <svg width="20" height="20">
+                      <svg width="20" height="20" class="social-list__icon">
                         <use href="./img/sprite.svg#social-linkedin"></use>
                       </svg>
                     </a>
@@ -342,7 +347,7 @@
           <ul class="clients__list list">
             <li class="clients__item">
               <a class="clients__link" href="">
-                <svg width="106" height="60">
+                <svg width="106" height="60" class="clients__icon">
                   <use href="./img/sprite.svg#client-1"></use>
                 </svg>
               </a>
@@ -350,7 +355,7 @@
 
             <li class="clients__item">
               <a class="clients__link" href="">
-                <svg width="106" height="60">
+                <svg width="106" height="60" class="clients__icon">
                   <use href="./img/sprite.svg#client-2"></use>
                 </svg>
               </a>
@@ -358,7 +363,7 @@
 
             <li class="clients__item">
               <a class="clients__link" href="">
-                <svg width="106" height="60">
+                <svg width="106" height="60" class="clients__icon">
                   <use href="./img/sprite.svg#client-3"></use>
                 </svg>
               </a>
@@ -366,7 +371,7 @@
 
             <li class="clients__item">
               <a class="clients__link" href="">
-                <svg width="106" height="60">
+                <svg width="106" height="60" class="clients__icon">
                   <use href="./img/sprite.svg#client-4"></use>
                 </svg>
               </a>
@@ -374,7 +379,7 @@
 
             <li class="clients__item">
               <a class="clients__link" href="">
-                <svg width="106" height="60">
+                <svg width="106" height="60" class="clients__icon">
                   <use href="./img/sprite.svg#client-5"></use>
                 </svg>
               </a>
@@ -382,7 +387,7 @@
 
             <li class="clients__item">
               <a class="clients__link" href="">
-                <svg width="106" height="60">
+                <svg width="106" height="60" class="clients__icon">
                   <use href="./img/sprite.svg#client-6"></use>
                 </svg>
               </a>
@@ -417,7 +422,7 @@
           <ul class="footer__social-list social-list list">
             <li class="social-list__item">
               <a class="social-list__link" href="">
-                <svg width="20" height="20">
+                <svg width="20" height="20" class="social-list__icon">
                   <use href="./img/sprite.svg#social-instagram"></use>
                 </svg>
               </a>
@@ -425,7 +430,7 @@
 
             <li class="social-list__item">
               <a class="social-list__link" href="">
-                <svg width="20" height="20">
+                <svg width="20" height="20" class="social-list__icon">
                   <use href="./img/sprite.svg#social-twitter"></use>
                 </svg>
               </a>
@@ -433,7 +438,7 @@
 
             <li class="social-list__item">
               <a class="social-list__link" href="">
-                <svg width="20" height="20">
+                <svg width="20" height="20" class="social-list__icon">
                   <use href="./img/sprite.svg#social-facebook"></use>
                 </svg>
               </a>
@@ -441,7 +446,7 @@
 
             <li class="social-list__item">
               <a class="social-list__link" href="">
-                <svg width="20" height="20">
+                <svg width="20" height="20" class="social-list__icon">
                   <use href="./img/sprite.svg#social-linkedin"></use>
                 </svg>
               </a>
@@ -451,5 +456,16 @@
         <div class="footer__form"></div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal" data-modal>
+        <button class="modal__close-btn" type="button" data-action="close-modal">
+          <span class="modal__close-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/modal.js"></script>
   </body>
 </html>
