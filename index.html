@@ -23,9 +23,15 @@
           <a class="nav__logo logo" href="/"><span>Web</span>Studio</a>
 
           <menu class="nav__list list">
-            <li class="nav__item item"><a class="nav__link link active" href="">Студія</a></li>
-            <li class="nav__item item"><a class="nav__link link" href="./portfolio.html">Портфоліо</a></li>
-            <li class="nav__item item"><a class="nav__link link" href="#">Контакти</a></li>
+            <li class="nav__item item">
+              <a class="nav__link link active" href="">Студія</a>
+            </li>
+            <li class="nav__item item">
+              <a class="nav__link link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="nav__item item">
+              <a class="nav__link link" href="#">Контакти</a>
+            </li>
           </menu>
         </nav>
 
@@ -56,7 +62,13 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero__button button" type="button" data-action="open-modal">Замовити послугу</button>
+          <button
+            class="hero__button button"
+            type="button"
+            data-action="open-modal"
+          >
+            Замовити послугу
+          </button>
         </div>
       </section>
 
@@ -75,7 +87,8 @@
               <div class="feature__body">
                 <h3 class="feature__title">УВАГА ДО ДЕТАЛЕЙ</h3>
                 <p class="feature__text">
-                  Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
+                  Ідейні міркування, і навіть початок повсякденної роботи з
+                  формування позиції.
                 </p>
               </div>
             </li>
@@ -88,7 +101,10 @@
               </div>
               <div class="feature__body">
                 <h3 class="feature__title">ПУНКТУАЛЬНІСТЬ</h3>
-                <p class="feature__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+                <p class="feature__text">
+                  Завдання організації, особливо рамки і місце навчання кадрів
+                  тягне у себе.
+                </p>
               </div>
             </li>
 
@@ -100,7 +116,10 @@
               </div>
               <div class="feature__body">
                 <h3 class="feature__title">ПЛАНУВАННЯ</h3>
-                <p class="feature__text">Так само консультація з широким активом значною мірою зумовлює.</p>
+                <p class="feature__text">
+                  Так само консультація з широким активом значною мірою
+                  зумовлює.
+                </p>
               </div>
             </li>
 
@@ -112,7 +131,10 @@
               </div>
               <div class="feature__body">
                 <h3 class="feature__title">СУЧАСНІ ТЕХНОЛОГІІ</h3>
-                <p class="feature__text">Значущість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+                <p class="feature__text">
+                  Значущість цих проблем настільки очевидна, що реалізація
+                  планових завдань.
+                </p>
               </div>
             </li>
           </ul>
@@ -126,7 +148,12 @@
           <ul class="what-we-do__list list">
             <li class="what-we-do__item">
               <h3 class="what-we-do__subtitle">Десктопні додатки</h3>
-              <img src="./img/what-we-do/what-we-do-1.jpg" alt="Робота з планшетом" width="370" height="294" />
+              <img
+                src="./img/what-we-do/what-we-do-1.jpg"
+                alt="Робота з планшетом"
+                width="370"
+                height="294"
+              />
             </li>
             <li class="what-we-do__item">
               <h3 class="what-we-do__subtitle">Мобільні додатки</h3>
@@ -298,7 +325,13 @@
             </li>
 
             <li class="our-team__item team-member">
-              <img class="team-member__photo" src="img/team/photo-4.jpg" alt="Фото " width="270" height="260" />
+              <img
+                class="team-member__photo"
+                src="img/team/photo-4.jpg"
+                alt="Фото "
+                width="270"
+                height="260"
+              />
               <div class="team-member__content">
                 <h3 class="team-member__name">Михайло Єрмаков</h3>
                 <p class="team-member__position">UI Designer</p>
@@ -404,12 +437,16 @@
           <address class="footer__address address">
             <ul class="address__list">
               <li class="address__item">
-                <a class="link link-map" href="https://maps.app.goo.gl/SjsjAe57UmDZUiKMA"
+                <a
+                  class="link link-map"
+                  href="https://maps.app.goo.gl/SjsjAe57UmDZUiKMA"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
               <li class="address__item">
-                <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li class="address__item">
                 <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -417,6 +454,7 @@
             </ul>
           </address>
         </div>
+
         <div class="footer__social">
           <strong class="footer__title">Приєднуйтесь</strong>
           <ul class="footer__social-list social-list list">
@@ -453,15 +491,90 @@
             </li>
           </ul>
         </div>
-        <div class="footer__form"></div>
+
+        <form class="footer__form">
+          <strong class="footer__title">Підпишіться на розсилку</strong>
+          <div class="footer__form-group">
+            <input
+              class="footer__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              required
+            />
+            <button class="footer__button button" type="submit">
+              Підписатися
+              <svg class="footer__icon" width="24" height="24">
+                <use href="./img/sprite-form.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
 
     <div class="backdrop is-hidden" data-backdrop>
       <div class="modal" data-modal>
-        <button class="modal__close-btn" type="button" data-action="close-modal">
+        <button
+          class="modal__close-btn"
+          type="button"
+          data-action="close-modal"
+        >
           <span class="modal__close-icon"></span>
         </button>
+
+        <form class="modal__form">
+          <strong class="modal__title"
+            >Залиште свої дані, ми вам передзвонимо</strong
+          >
+          <label class="modal__field">
+            Ім'я
+            <input class="modal__input" type="text" name="name" id="name" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="./img/sprite-form.svg#person"></use>
+            </svg>
+          </label>
+
+          <label class="modal__field">
+            Телефон
+            <input class="modal__input" type="text" name="name" id="name" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="./img/sprite-form.svg#phone"></use>
+            </svg>
+          </label>
+
+          <label class="modal__field">
+            Пошта
+            <input class="modal__input" type="text" name="name" id="name" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="./img/sprite-form.svg#email"></use>
+            </svg>
+          </label>
+
+          <label class="modal__message-field">
+            Коментар
+            <textarea
+              class="modal__input"
+              type="text"
+              name="name"
+              id="name"
+            ></textarea>
+          </label>
+
+          <label class="modal__checkbox-label">
+            <input
+              class="modal__checkbox"
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+            />
+            Погоджуюся з розсилкою та приймаю
+            <a class="modal__checkbox-link" href="">Умови договору</a>
+          </label>
+
+          <button class="modal__button button" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
 
