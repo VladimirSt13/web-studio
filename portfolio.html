@@ -25,9 +25,12 @@
               <a class="nav__link link" href="/">Студія</a>
             </li>
             <li class="nav__item item">
-              <a class="nav__link link active" href="./portfolio.html"
-                >Портфоліо</a
+              <a
+                class="nav__link nav__link--active link"
+                href="./portfolio.html"
               >
+                Портфоліо
+              </a>
             </li>
             <li class="nav__item item">
               <a class="nav__link link" href="#contacts">Контакти</a>
@@ -379,22 +382,26 @@
       <div class="container">
         <div class="footer__content">
           <a class="footer__logo logo" href="/"><span>Web</span>Studio</a>
-          <address class="footer__address address" id="contacts">
-            <ul class="address__list">
-              <li class="address__item">
+          <address class="footer__address address-footer" id="contacts">
+            <ul class="address-footer__list">
+              <li class="address-footer__item">
                 <a
-                  class="link link-map"
+                  class="address-footer__link address-footer__link--map link"
                   href="https://maps.app.goo.gl/SjsjAe57UmDZUiKMA"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li class="address__item">
-                <a class="link" href="mailto:info@devstudio.com"
+              <li class="address-footer__item">
+                <a
+                  class="address-footer__link link"
+                  href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="address__item">
-                <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="address-footer__item">
+                <a class="address-footer__link link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
@@ -451,7 +458,7 @@
             <button class="footer__button button" type="submit">
               Підписатися
               <svg class="footer__icon" width="24" height="24">
-                <use href="./img/sprite-form.svg#icon-send"></use>
+                <use href="./img/sprite.svg#icon-send"></use>
               </svg>
             </button>
           </div>
