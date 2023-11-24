@@ -1,0 +1,21 @@
+:root {
+  --font-main: "Roboto", sans-serif;
+  --font-secondary: "Raleway", sans-serif;
+
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #2f303a;
+  --color-bg-accent: #f5f4fa;
+  --color-bg-grey: #c4c4c4;
+
+  --color-text-primary-title: #212121;
+  --color-text-primary-text: #757575;
+  --color-text-secondary-title: #ffffff;
+  --color-text-secondary-text: rgba(255, 255, 255, 0.6);
+  --color-text-accent: #2196f3;
+  --color-text-accent-hover: #188ce8;
+  --color-text-black: #000000;
+
+  --color-grey-secondary: #afb1b8;
+
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

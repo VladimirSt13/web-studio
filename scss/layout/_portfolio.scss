@@ -1,0 +1,119 @@
+.portfolio {
+  &__list {
+    --num-items: 3;
+    --gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+  &__item {
+    width: calc(
+      (100% - var(--gap) * (var(--num-items) - 1)) / var(--num-items)
+    );
+  }
+}
+
+.filter {
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+
+  &__label {
+    display: block;
+    padding: 0.6rem 1.375rem;
+    border-radius: 0.25rem;
+    background: var(--color-bg-accent);
+    color: var(--color-text-primary-title);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    cursor: pointer;
+
+    transition: background-color var(--transition), color var(--transition);
+
+    &:hover,
+    &:focus,
+    &.selected {
+      background-color: var(--color-text-accent);
+      color: var(--color-text-secondary-title);
+
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.card {
+  font-family: inherit;
+  display: block;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+
+    & .card__overlay {
+      transform: translateY(0);
+    }
+  }
+
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(102%);
+
+    transition: transform var(--transition);
+  }
+  &__overlay-text {
+    padding: 1.5rem;
+
+    color: var(--color-text-secondary-title);
+    font-size: 1.125rem;
+    line-height: 1.55; /* 155.556% */
+    letter-spacing: 0.0338rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    --border: 1px solid #eee;
+
+    padding: 1.25rem 1.5rem;
+    border-left: var(--border);
+    border-right: var(--border);
+    border-bottom: var(--border);
+    background-color: var(--color-bg-primary);
+  }
+  &__name {
+    color: var(--color-text-primary-title);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0.0675rem;
+  }
+  &__type {
+    color: var(--color-text-primary-text);
+    font-size: 1rem;
+    line-height: 1.875;
+    letter-spacing: 0.03rem;
+  }
+}

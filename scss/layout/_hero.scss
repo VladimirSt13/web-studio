@@ -1,0 +1,38 @@
+.hero {
+  background-color: var(--color-bg-grey);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero/hero-bg-image.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__title {
+    max-width: 696px;
+    text-align: center;
+
+    color: var(--color-text-secondary-title);
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.36; /* 136.364% */
+    letter-spacing: 0.165rem;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    width: 13.4375rem;
+    height: 3.125rem;
+  }
+}

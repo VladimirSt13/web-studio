@@ -1,0 +1,43 @@
+.features {
+  &.section {
+    padding-bottom: 0;
+  }
+
+  letter-spacing: 0.0262rem;
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.feature {
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 2rem;
+
+    border-radius: 4px;
+
+    background-color: var(--color-bg-accent);
+
+    svg {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    color: var(--color-text-primary-title);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: var(--color-text-primary-text);
+    line-height: 1.71; /* 171.429% */
+  }
+}
