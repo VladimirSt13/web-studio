@@ -3,81 +3,109 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 82px;
+  height: 60px;
   z-index: 10;
   border: 1px solid #ececec;
   background-color: var(--color-bg-primary);
 
+  @media screen and (width >= $tablet) {
+    height: 82px;
+  }
+
   .container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
     column-gap: 6rem;
-  }
+    height: 100%;
 
-  .link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-    font-weight: 500;
-    letter-spacing: 0.0175rem;
-
-    transition: color var(--transition);
-
-    &:hover,
-    &:focus {
-      color: var(--color-text-accent);
+    @media screen and (width >= $tablet) {
     }
   }
 
-  .nav {
-    display: flex;
-    align-items: center;
-    column-gap: 6rem;
+  &__logo {
   }
 
-  .nav__list,
-  .address__list {
-    display: flex;
-    column-gap: 3rem;
-    row-gap: 1rem;
+  &__menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 11;
 
-    flex-wrap: wrap;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .icon-menu,
+    .icon-close {
+      transition: opacity var(--transition);
+    }
+
+    .icon-menu {
+      opacity: 1;
+    }
+    .icon-close {
+      opacity: 0;
+    }
+
+    &.is-open {
+      .icon-menu {
+        opacity: 0;
+      }
+      .icon-close {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (width >= $tablet) {
+      display: none;
+    }
   }
 
-  .nav__link {
-    position: relative;
-    color: var(--color-text-primary-title);
-  }
-
-  .nav__link--active {
-    color: var(--color-text-accent);
-    &::after {
-      content: "";
+  &__body {
+    @media screen and (width < $tablet) {
       position: absolute;
-      bottom: -1px;
+      background-color: var(--color-bg-primary);
+      top: 0;
       left: 0;
       width: 100%;
-      height: 4px;
-      background-color: var(--color-text-accent);
-      border-radius: 2px;
+      height: 100vh;
+      transform: translateX(101%);
+      transition: transform var(--transition);
+
+      z-index: 10;
+
+      &.is-open {
+        transform: translateX(0);
+        overflow-y: auto;
+      }
+
+      padding: 3rem 2.5rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
     }
   }
 
-  .address {
+  &__nav {
   }
 
-  .address__link {
-    color: var(--color-text-primary-text);
-    font-style: normal;
+  &__contact-us {
+  }
 
-    text-align: center;
+  &__address {
+    margin-bottom: 4rem;
+  }
 
-    > svg {
-      fill: currentColor;
+  &__social {
+    @media screen and (width >= $tablet) {
+      display: none;
     }
   }
 }
