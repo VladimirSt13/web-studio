@@ -6,11 +6,12 @@
       row-gap: 2rem;
     }
 
-    @media screen and (width >= $tablet) {
-      column-gap: 3rem;
-      row-gap: 1rem;
-
-      flex-wrap: wrap;
+    @media screen and ($tablet <= width < $desktop) {
+      flex-direction: column;
+      row-gap: 0.625rem;
+    }
+    @media screen and (width >= $desktop) {
+      column-gap: 1.875rem;
     }
   }
   &__link {

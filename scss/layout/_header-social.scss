@@ -26,4 +26,8 @@
     line-height: 1.2222; /* 122.222% */
     letter-spacing: 0.0225rem;
   }
+
+  @media screen and (width >= $tablet) {
+    display: none;
+  }
 }

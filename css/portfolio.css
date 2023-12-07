@@ -600,8 +600,29 @@ img {
     overflow-y: auto;
   }
 }
-.page-header__address {
-  margin-bottom: 4rem;
+@media screen and (width >= 768px) {
+  .page-header__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 1rem;
+       -moz-column-gap: 1rem;
+            column-gap: 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+@media screen and (width < 768px) {
+  .page-header__address {
+    margin-bottom: 4rem;
+  }
 }
 @media screen and (width >= 768px) {
   .page-header__social {

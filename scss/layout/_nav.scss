@@ -1,16 +1,9 @@
 .nav {
-  @media screen and (width >= $tablet) {
-    display: flex;
-    align-items: center;
-    column-gap: 6rem;
-  }
-
   &__list {
     @media screen and (width >= $tablet) {
       display: flex;
       column-gap: 3rem;
       row-gap: 1rem;
-
       flex-wrap: wrap;
     }
   }
