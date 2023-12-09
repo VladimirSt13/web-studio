@@ -3,7 +3,11 @@
   align-items: center;
   justify-content: center;
   gap: 0.625rem;
-  padding: 0.625rem 1.75rem;
+  padding: 10px 24px;
+
+  @media screen and (width >= $desktop) {
+    padding: 10px 32px;
+  }
 
   border-radius: 4px;
   background-color: var(--color-text-accent);
@@ -15,10 +19,11 @@
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
+  line-height: 1.88;
   letter-spacing: 0.06rem;
 
   cursor: pointer;
-  border-color: transparent;
+  border: none;
 
   transition: background-color var(--transition);
 

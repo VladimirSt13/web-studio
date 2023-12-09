@@ -1,4 +1,8 @@
 .what-we-do {
+  @media screen and (width < $desktop) {
+    display: none;
+  }
+
   &__title {
   }
 

@@ -10,23 +10,41 @@
 }
 
 [class*="container"] {
-  max-width: 1230px;
   margin-left: auto;
   margin-right: auto;
   padding-inline: 1rem;
+  max-width: 480px;
+
+  @media screen and (width >= $tablet) {
+    max-width: 768px;
+  }
+
+  @media screen and (width >= $desktop) {
+    max-width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 5.875rem;
-  padding-bottom: 5.875rem;
+  padding-block: 3.75rem;
+
+  @media screen and (width > $desktop) {
+    padding-block: 5.875rem;
+  }
 
   &__title {
-    margin-bottom: 3rem;
-
+    margin-bottom: 1.875rem;
     color: var(--color-text-primary-title);
+
     text-align: center;
-    font-size: 2.25rem;
     font-weight: 700;
-    letter-spacing: 0.0675rem;
+    font-size: 1.75rem;
+    letter-spacing: 0.0525rem;
+
+    @media screen and (width > $desktop) {
+      margin-bottom: 3rem;
+
+      font-size: 2.25rem;
+      letter-spacing: 0.0675rem;
+    }
   }
 }
