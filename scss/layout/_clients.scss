@@ -1,8 +1,10 @@
 .clients {
   &__list {
+    --gap: 2rem;
+
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--gap);
     justify-content: space-between;
     align-items: center;
   }
@@ -11,12 +13,26 @@
     fill: currentColor;
   }
 
+  &__item {
+    width: calc((100% - (var(--n) - 1) * var(--gap)) / var(--n));
+
+    height: 92px;
+
+    --n: 2;
+
+    @include mq(tablet) {
+      --n: 3;
+    }
+    @include mq(desktop) {
+      --n: 6;
+    }
+  }
+
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 92px;
+    height: 100%;
 
     border-radius: 0.25rem;
     border: 1px solid #afb1b8;
