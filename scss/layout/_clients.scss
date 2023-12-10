@@ -20,6 +20,9 @@
 
     --n: 2;
 
+    @media screen and (width < $extra-small) {
+      --n: 1;
+    }
     @include mq(tablet) {
       --n: 3;
     }
