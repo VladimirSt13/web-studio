@@ -1,14 +1,25 @@
 @use "sass:map";
 
 $breakpoints: (
+  "extra-small": $extra-small,
   "small": $small,
   "mobile": $mobile,
   "tablet": $tablet,
   "desktop": $desktop,
 );
 
-@mixin mq($breakpoint) {
-  @media screen and (width >= map-get($breakpoints, $breakpoint)) {
-    @content;
+@mixin mq($from: 0, $to: 0) {
+  @if $from == 0 {
+    @media screen and (width < map-get($breakpoints, $to)) {
+      @content;
+    }
+  } @else if $to == 0 {
+    @media screen and (width >= map-get($breakpoints, $from)) {
+      @content;
+    }
+  } @else {
+    @media screen and (map-get($breakpoints, $from) <= width < map-get($breakpoints, $to)) {
+      @content;
+    }
   }
 }

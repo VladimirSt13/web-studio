@@ -1,5 +1,5 @@
 .what-we-do {
-  @media screen and (width < $desktop) {
+  @include mq($to: "desktop") {
     display: none;
   }
 

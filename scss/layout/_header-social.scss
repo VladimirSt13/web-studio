@@ -27,7 +27,7 @@
     letter-spacing: 0.0225rem;
   }
 
-  @media screen and (width >= $tablet) {
+  @include mq($from: "tablet") {
     display: none;
   }
 }

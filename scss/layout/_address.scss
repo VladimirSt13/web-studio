@@ -1,16 +1,16 @@
 .address {
   &__list {
     display: flex;
-    @media screen and (width < $tablet) {
+    @include mq($to: "tablet") {
       flex-direction: column-reverse;
       row-gap: 2rem;
     }
 
-    @media screen and ($tablet <= width < $desktop) {
+    @include mq($from: "tablet", $to: "desktop") {
       flex-direction: column;
       row-gap: 0.625rem;
     }
-    @media screen and (width >= $desktop) {
+    @include mq($from: "desktop") {
       column-gap: 1.875rem;
     }
   }
@@ -21,7 +21,7 @@
     text-align: center;
 
     > svg {
-      @media screen and (width < $tablet) {
+      @include mq($to: "tablet") {
         display: none;
       }
       fill: currentColor;
@@ -34,7 +34,7 @@
       color: var(--color-text-accent);
     }
 
-    @media screen and (width < $small) {
+    @include mq($to: "small") {
       &--email {
         font-size: 1rem;
         letter-spacing: 0.03rem;
@@ -46,7 +46,7 @@
       }
     }
 
-    @media screen and ($small <= width < $tablet) {
+    @include mq($from: "small", $to: "tablet") {
       &--email {
         font-size: 1.5rem;
         letter-spacing: 0.03rem;

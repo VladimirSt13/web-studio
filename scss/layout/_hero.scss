@@ -6,7 +6,7 @@
   background-size: cover;
   height: 400px;
 
-  @media screen and (width >= $desktop) {
+  @include mq($from: "desktop") {
     height: 600px;
   }
 
@@ -30,7 +30,7 @@
     letter-spacing: 0.0975rem;
     text-transform: uppercase;
 
-    @media screen and (width >= $desktop) {
+    @include mq($from: "desktop") {
       max-width: 696px;
       font-size: 2.75rem;
       line-height: 1.36; /* 136.364% */

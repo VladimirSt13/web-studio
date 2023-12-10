@@ -1,6 +1,6 @@
 .nav {
   &__list {
-    @media screen and (width >= $tablet) {
+    @include mq($from: "tablet") {
       display: flex;
       column-gap: 3rem;
       row-gap: 1rem;
@@ -9,7 +9,7 @@
   }
 
   &__item {
-    @media screen and (width < $tablet) {
+    @include mq($to: "tablet") {
       &:not(:last-child) {
         margin-bottom: 2rem;
       }
@@ -28,11 +28,11 @@
       color: var(--color-text-accent);
     }
 
-    @media screen and (width < $tablet) {
+    @include mq($to: "tablet") {
       font-size: 40px;
     }
 
-    @media screen and (width >= $tablet) {
+    @include mq($from: "tablet") {
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -44,7 +44,7 @@
     &--active {
       color: var(--color-text-accent);
 
-      @media screen and (width >= $tablet) {
+      @include mq($from: "tablet") {
         &::after {
           content: "";
           position: absolute;

@@ -20,13 +20,14 @@
 
     --n: 2;
 
-    @media screen and (width < $extra-small) {
+    @include mq($to: "extra-small") {
       --n: 1;
     }
-    @include mq(tablet) {
+
+    @include mq($from: "tablet") {
       --n: 3;
     }
-    @include mq(desktop) {
+    @include mq($from: "desktop") {
       --n: 6;
     }
   }

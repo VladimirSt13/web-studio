@@ -1,16 +1,16 @@
 .features {
   &.section {
-    @media screen and (width >= $desktop) {
+    @include mq($from: "desktop") {
       padding-bottom: 0;
     }
   }
 
-  @media screen and (width >= $tablet) {
+  @include mq($from: "tablet") {
   }
-  @media screen and (width >= $desktop) {
+  @include mq($from: "desktop") {
   }
   &__list {
-    @media screen and (width >= $tablet) {
+    @include mq($from: "tablet") {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
@@ -18,16 +18,16 @@
   }
 
   &__item {
-    @media screen and (width < $tablet) {
+    @include mq($to: "tablet") {
       &:not(:last-child) {
         margin-bottom: 2rem;
       }
     }
 
-    @media screen and (width >= $tablet) {
+    @include mq($from: "tablet") {
       flex-basis: calc((100% - 4rem) / 2);
     }
-    @media screen and (width >= $desktop) {
+    @include mq($from: "desktop") {
       flex-basis: calc((100% - 8rem) / 4);
     }
   }
@@ -61,18 +61,18 @@
     text-transform: uppercase;
     letter-spacing: 0.0262rem;
 
-    @media screen and (width < $tablet) {
+    @include mq($to: "tablet") {
       text-align: center;
     }
 
-    @media screen and (width < $desktop) {
+    @include mq($to: "desktop") {
       font-size: 0.875rem;
     }
 
-    @media screen and (width >= $tablet) {
+    @include mq($from: "tablet") {
     }
 
-    @media screen and (width >= $desktop) {
+    @include mq($from: "desktop") {
       margin-bottom: 1rem;
     }
   }
@@ -82,7 +82,7 @@
     letter-spacing: 0.0262rem;
     line-height: 1.71; /* 171.429% */
 
-    @media screen and (width < $desktop) {
+    @include mq($to: "desktop") {
       font-size: 0.875rem;
     }
   }

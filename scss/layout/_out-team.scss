@@ -16,10 +16,10 @@
     --n: 1;
     flex-basis: calc((100% - (var(--n) - 1) * var(--gap)) / var(--n));
 
-    @media screen and (width >= $tablet) {
+    @include mq($from: "tablet") {
       --n: 2;
     }
-    @media screen and (width >= $desktop) {
+    @include mq($from: "desktop") {
       --n: 4;
     }
   }

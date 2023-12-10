@@ -5,7 +5,7 @@
   gap: 0.625rem;
   padding: 10px 24px;
 
-  @media screen and (width >= $desktop) {
+  @include mq($from: "desktop") {
     padding: 10px 32px;
   }
 

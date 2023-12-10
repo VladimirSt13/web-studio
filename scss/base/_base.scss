@@ -14,11 +14,11 @@
   padding-inline: 1rem;
   max-width: 480px;
 
-  @media screen and (width >= $tablet) {
+  @include mq($from: "tablet") {
     max-width: 768px;
   }
 
-  @media screen and (width >= $desktop) {
+  @include mq($from: "desktop") {
     max-width: 1200px;
   }
 }
@@ -26,7 +26,7 @@
 .section {
   padding-block: 3.75rem;
 
-  @media screen and (width > $desktop) {
+  @include mq($from: "desktop") {
     padding-block: 5.875rem;
   }
 
@@ -39,7 +39,7 @@
     font-size: 1.75rem;
     letter-spacing: 0.0525rem;
 
-    @media screen and (width > $desktop) {
+    @include mq($from: "desktop") {
       margin-bottom: 3rem;
 
       font-size: 2.25rem;
