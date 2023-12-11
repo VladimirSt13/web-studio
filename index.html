@@ -169,25 +169,75 @@
             <ul class="what-we-do__list list">
               <li class="what-we-do__item">
                 <h3 class="what-we-do__subtitle">Десктопні додатки</h3>
-                <img src="./img/what-we-do/what-we-do-1.jpg" alt="Робота з планшетом" width="370" height="294" />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/what-we-do/img-370.webp  1x,
+                      ./img/what-we-do/img-740.webp  2x,
+                      ./img/what-we-do/img-1110.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="
+                      ./img/what-we-do/img-370.jpg  1x,
+                      ./img/what-we-do/img-740.jpg  2x,
+                      ./img/what-we-do/img-1110.jpg 3x
+                    "
+                    src="./img/what-we-do/img-370.jpg"
+                    alt="Робота з планшетом"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
               </li>
               <li class="what-we-do__item">
                 <h3 class="what-we-do__subtitle">Мобільні додатки</h3>
-                <img
-                  src="./img/what-we-do/what-we-do-2.jpg"
-                  alt="Робота з мобільним телефоном та комп'ютером"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/what-we-do/img-1-370.webp  1x,
+                      ./img/what-we-do/img-1-740.webp  2x,
+                      ./img/what-we-do/img-1-1110.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="
+                      ./img/what-we-do/img-1-370.jpg  1x,
+                      ./img/what-we-do/img-1-740.jpg  2x,
+                      ./img/what-we-do/img-1-1110.jpg 3x
+                    "
+                    src="./img/what-we-do/img-1-370.jpg"
+                    alt="Робота з мобільним телефоном та комп'ютером"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
               </li>
               <li class="what-we-do__item">
                 <h3 class="what-we-do__subtitle">Дизайнерські рішення</h3>
-                <img
-                  src="./img/what-we-do/what-we-do-3.jpg"
-                  alt="Робота з планшетом та комп'ютером"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/what-we-do/img-2-370.webp  1x,
+                      ./img/what-we-do/img-2-740.webp  2x,
+                      ./img/what-we-do/img-2-1110.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="
+                      ./img/what-we-do/img-2-370.jpg  1x,
+                      ./img/what-we-do/img-2-740.jpg  2x,
+                      ./img/what-we-do/img-2-1110.jpg 3x
+                    "
+                    src="./img/what-we-do/img-2-370.jpg"
+                    alt="Робота з планшетом та комп'ютером"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
               </li>
             </ul>
           </div>
@@ -199,13 +249,19 @@
 
             <ul class="our-team__list list">
               <li class="our-team__item team-member">
-                <img
-                  class="team-member__photo"
-                  src="img/team/photo-1.jpg"
-                  alt="Фото Ігоря Дем'яненко"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="./img/team/img-270.webp 270w, ./img/team/img-540.webp 540w, ./img/team/img-810.webp 810w"
+                    type="image/webp"
+                  />
+                  <img
+                    class="team-member__photo"
+                    srcset="./img/team/img-270.jpg 270w, ./img/team/img-540.jpg 540w, ./img/team/img-810.jpg 810w"
+                    src="./img/team/img-270.jpg"
+                    alt="Фото Ігоря Дем'яненко"
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  />
+                </picture>
                 <div class="team-member__content">
                   <h3 class="team-member__name">Ігор Дем'яненко</h3>
                   <p class="team-member__position">Product Designer</p>
@@ -247,13 +303,23 @@
               </li>
 
               <li class="our-team__item team-member">
-                <img
-                  class="team-member__photo"
-                  src="img/team/photo-2.jpg"
-                  alt="Фото Ольги Рєпіної "
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/team/img-1-270.webp 270w,
+                      ./img/team/img-1-540.webp 540w,
+                      ./img/team/img-1-810.webp 810w
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    class="team-member__photo"
+                    srcset="./img/team/img-1-270.jpg 270w, ./img/team/img-1-540.jpg 540w, ./img/team/img-1-810.jpg 810w"
+                    src="./img/team/img-270.jpg"
+                    alt="Фото Ольги Рєпіної "
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  />
+                </picture>
                 <div class="team-member__content">
                   <h3 class="team-member__name">Ольга Рєпіна</h3>
                   <p class="team-member__position">Frontend Developer</p>
@@ -294,13 +360,23 @@
               </li>
 
               <li class="our-team__item team-member">
-                <img
-                  class="team-member__photo"
-                  src="img/team/photo-3.jpg"
-                  alt="Фото Миколи Тарасова"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/team/img-2-270.webp 270w,
+                      ./img/team/img-2-540.webp 540w,
+                      ./img/team/img-2-810.webp 810w
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    class="team-member__photo"
+                    srcset="./img/team/img-2-270.jpg 270w, ./img/team/img-2-540.jpg 540w, ./img/team/img-2-810.jpg 810w"
+                    src="./img/team/img-270.jpg"
+                    alt="Фото Миколи Тарасова"
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  />
+                </picture>
                 <div class="team-member__content">
                   <h3 class="team-member__name">Микола Тарасов</h3>
                   <p class="team-member__position">Marketing</p>
@@ -341,7 +417,21 @@
               </li>
 
               <li class="our-team__item team-member">
-                <img class="team-member__photo" src="img/team/photo-4.jpg" alt="Фото " width="270" height="260" />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/team/img-3-270.webp 270w,
+                      ./img/team/img-3-540.webp 540w,
+                      ./img/team/img-3-810.webp 810w
+                    "
+                    type="image/webp" />
+                  <img
+                    class="team-member__photo"
+                    srcset="./img/team/img-3-270.jpg 270w, ./img/team/img-3-540.jpg 540w, ./img/team/img-3-810.jpg 810w"
+                    src="./img/team/img-270.jpg"
+                    alt="Фото Михайла Єрмакова"
+                    sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                /></picture>
                 <div class="team-member__content">
                   <h3 class="team-member__name">Михайло Єрмаков</h3>
                   <p class="team-member__position">UI Designer</p>

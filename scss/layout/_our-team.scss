@@ -35,7 +35,15 @@
 
   &__photo {
     width: 100%;
-    height: auto;
+    height: 460px;
+    object-fit: cover;
+
+    @include mq($from: "tablet") {
+      height: 374px;
+    }
+    @include mq($from: "desktop") {
+      height: 260px;
+    }
   }
 
   &__content {
