@@ -2,6 +2,7 @@
 @import "./utils/helpers";
 @import "./utils/visually-hidden";
 @import "./utils/breakpoints";
+@import "./utils/mixins";
 
 @import "./vendors/normalize";
 
@@ -14,5 +15,10 @@
 @import "./components/social";
 
 @import "./layout/header";
+@import "./layout/nav";
+@import "./layout/address";
+@import "./layout/header-social";
+
 @import "./layout/portfolio";
+
 @import "./layout/footer";

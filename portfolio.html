@@ -18,47 +18,74 @@
     <div class="wrapper">
       <header class="page-header">
         <div class="container">
-          <nav class="header__nav nav">
-            <a class="nav__logo logo" href="/"><span>Web</span>Studio</a>
+          <a class="page-header__logo logo" href="/"><span>Web</span>Studio</a>
 
-            <menu class="nav__list list">
-              <li class="nav__item item">
-                <a class="nav__link link" href="/">Студія</a>
-              </li>
-              <li class="nav__item item">
-                <a
-                  class="nav__link nav__link--active link"
-                  href="./portfolio.html"
-                >
-                  Портфоліо
-                </a>
-              </li>
-              <li class="nav__item item">
-                <a class="nav__link link" href="#contacts">Контакти</a>
-              </li>
-            </menu>
-          </nav>
+          <button
+            type="button"
+            class="page-header__menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-close" href="img/sprite.svg#icon-close"></use>
+              <use class="icon-menu" href="img/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
 
-          <address class="header__address address">
-            <ul class="address__list list">
-              <li class="address__item item">
-                <a class="address__link link" href="mailto:info@devstudio.com">
-                  <svg width="16" height="12">
-                    <use href="./img/sprite.svg#mail"></use>
-                  </svg>
-                  <span>info@devstudio.com</span></a
-                >
-              </li>
-              <li class="address__item item">
-                <a class="address__link link" href="tel:+380961111111">
-                  <svg width="10" height="16">
-                    <use href="./img/sprite.svg#phone"></use>
-                  </svg>
-                  <span>+38 096 111 11 11</span></a
-                >
-              </li>
-            </ul>
-          </address>
+          <div class="page-header__body" data-menu>
+            <nav class="page-header__nav nav">
+              <menu class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Студія</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link nav__link--active" href="./portfolio.html"> Портфоліо </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#contacts">Контакти</a>
+                </li>
+              </menu>
+            </nav>
+
+            <div class="page-header__contact-us">
+              <address class="page-header__address address">
+                <ul class="address__list">
+                  <li class="address__item">
+                    <a class="address__link address__link--email" href="mailto:info@devstudio.com">
+                      <svg width="16" height="12">
+                        <use href="./img/sprite.svg#mail"></use>
+                      </svg>
+                      <span>info@devstudio.com</span></a
+                    >
+                  </li>
+                  <li class="address__item">
+                    <a class="address__link address__link--phone" href="tel:+380961111111">
+                      <svg width="10" height="16">
+                        <use href="./img/sprite.svg#phone"></use>
+                      </svg>
+                      <span>+38 096 111 11 11</span></a
+                    >
+                  </li>
+                </ul>
+              </address>
+
+              <ul class="page-header__social header-social">
+                <li class="header-social__item">
+                  <a class="header-social__link" href="">Instagram</a>
+                </li>
+                <li class="header-social__item">
+                  <a class="header-social__link" href="">Twitter</a>
+                </li>
+                <li class="header-social__item">
+                  <a class="header-social__link" href="">Facebook</a>
+                </li>
+                <li class="header-social__item">
+                  <a class="header-social__link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -67,52 +94,26 @@
           <div class="container">
             <h1 class="portfolio__title visually-hidden">Portfolio</h1>
 
-            <form class="filter">
+            <form class="portfolio__filter filter">
               <label class="filter__label selected">
                 Усі
-                <input
-                  class="visually-hidden"
-                  type="radio"
-                  name="filter"
-                  value="all"
-                  checked
-                />
+                <input class="visually-hidden" type="radio" name="filter" value="all" checked />
               </label>
               <label class="filter__label">
                 Веб сайти
-                <input
-                  class="visually-hidden"
-                  type="radio"
-                  name="filter"
-                  value="web"
-                />
+                <input class="visually-hidden" type="radio" name="filter" value="web" />
               </label>
               <label class="filter__label">
                 Додатки
-                <input
-                  class="visually-hidden"
-                  type="radio"
-                  name="filter"
-                  value="app"
-                />
+                <input class="visually-hidden" type="radio" name="filter" value="app" />
               </label>
               <label class="filter__label">
                 Дизайн
-                <input
-                  class="visually-hidden"
-                  type="radio"
-                  name="filter"
-                  value="design"
-                />
+                <input class="visually-hidden" type="radio" name="filter" value="design" />
               </label>
               <label class="filter__label">
                 Маркетинг
-                <input
-                  class="visually-hidden"
-                  type="radio"
-                  name="filter"
-                  value="marketing"
-                />
+                <input class="visually-hidden" type="radio" name="filter" value="marketing" />
               </label>
             </form>
 
@@ -120,18 +121,11 @@
               <li class="portfolio__item" data-type="web">
                 <a class="portfolio__link link card" href="">
                   <div class="card__thumb">
-                    <img
-                      class="card__img"
-                      src="img/portfolio/img.jpg"
-                      alt="Технокряк"
-                      width="370"
-                    />
+                    <img class="card__img" src="img/portfolio/img.jpg" alt="Технокряк" width="370" />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Ресурс пропонує комплексні пропозиції з різним рівнем
-                        функціоналу та сервісів. Все це дозволить відвідувачу
-                        отримати вичерпні відомості про компанію чи приватну
-                        особу.
+                        Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
+                        відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
                       </p>
                     </div>
                   </div>
@@ -153,14 +147,11 @@
                     />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis obcaecati temporibus voluptatibus deserunt
-                        culpa in eos praesentium magni exercitationem officia,
-                        accusamus aliquid consequatur a harum assumenda iusto ut
-                        perspiciatis similique facere! Magnam nam enim sed
-                        explicabo! Eum facilis doloremque ipsam nemo, voluptate
-                        minima atque quibusdam recusandae accusantium quam,
-                        possimus sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati temporibus
+                        voluptatibus deserunt culpa in eos praesentium magni exercitationem officia, accusamus aliquid
+                        consequatur a harum assumenda iusto ut perspiciatis similique facere! Magnam nam enim sed
+                        explicabo! Eum facilis doloremque ipsam nemo, voluptate minima atque quibusdam recusandae
+                        accusantium quam, possimus sequi!
                       </p>
                     </div>
                   </div>
@@ -182,14 +173,11 @@
                     />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis obcaecati temporibus voluptatibus deserunt
-                        culpa in eos praesentium magni exercitationem officia,
-                        accusamus aliquid consequatur a harum assumenda iusto ut
-                        perspiciatis similique facere! Magnam nam enim sed
-                        explicabo! Eum facilis doloremque ipsam nemo, voluptate
-                        minima atque quibusdam recusandae accusantium quam,
-                        possimus sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati temporibus
+                        voluptatibus deserunt culpa in eos praesentium magni exercitationem officia, accusamus aliquid
+                        consequatur a harum assumenda iusto ut perspiciatis similique facere! Magnam nam enim sed
+                        explicabo! Eum facilis doloremque ipsam nemo, voluptate minima atque quibusdam recusandae
+                        accusantium quam, possimus sequi!
                       </p>
                     </div>
                   </div>
@@ -203,22 +191,14 @@
               <li class="portfolio__item" data-type="marketing">
                 <a class="portfolio__link link card" href="">
                   <div class="card__thumb">
-                    <img
-                      class="card__img"
-                      src="img/portfolio/img-3.jpg"
-                      alt="Проєкт Prime"
-                      width="370"
-                    />
+                    <img class="card__img" src="img/portfolio/img-3.jpg" alt="Проєкт Prime" width="370" />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis obcaecati temporibus voluptatibus deserunt
-                        culpa in eos praesentium magni exercitationem officia,
-                        accusamus aliquid consequatur a harum assumenda iusto ut
-                        perspiciatis similique facere! Magnam nam enim sed
-                        explicabo! Eum facilis doloremque ipsam nemo, voluptate
-                        minima atque quibusdam recusandae accusantium quam,
-                        possimus sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati temporibus
+                        voluptatibus deserunt culpa in eos praesentium magni exercitationem officia, accusamus aliquid
+                        consequatur a harum assumenda iusto ut perspiciatis similique facere! Magnam nam enim sed
+                        explicabo! Eum facilis doloremque ipsam nemo, voluptate minima atque quibusdam recusandae
+                        accusantium quam, possimus sequi!
                       </p>
                     </div>
                   </div>
@@ -232,22 +212,14 @@
               <li class="portfolio__item" data-type="app">
                 <a class="portfolio__link link card" href="">
                   <div class="card__thumb">
-                    <img
-                      class="card__img"
-                      src="img/portfolio/img-4.jpg"
-                      alt="Проєкт Boxes"
-                      width="370"
-                    />
+                    <img class="card__img" src="img/portfolio/img-4.jpg" alt="Проєкт Boxes" width="370" />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis obcaecati temporibus voluptatibus deserunt
-                        culpa in eos praesentium magni exercitationem officia,
-                        accusamus aliquid consequatur a harum assumenda iusto ut
-                        perspiciatis similique facere! Magnam nam enim sed
-                        explicabo! Eum facilis doloremque ipsam nemo, voluptate
-                        minima atque quibusdam recusandae accusantium quam,
-                        possimus sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati temporibus
+                        voluptatibus deserunt culpa in eos praesentium magni exercitationem officia, accusamus aliquid
+                        consequatur a harum assumenda iusto ut perspiciatis similique facere! Magnam nam enim sed
+                        explicabo! Eum facilis doloremque ipsam nemo, voluptate minima atque quibusdam recusandae
+                        accusantium quam, possimus sequi!
                       </p>
                     </div>
                   </div>
@@ -261,22 +233,14 @@
               <li class="portfolio__item" data-type="web">
                 <a class="portfolio__link link card" href="">
                   <div class="card__thumb">
-                    <img
-                      class="card__img"
-                      src="img/portfolio/img-5.jpg"
-                      alt="Inspiration has no Borders"
-                      width="370"
-                    />
+                    <img class="card__img" src="img/portfolio/img-5.jpg" alt="Inspiration has no Borders" width="370" />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis obcaecati temporibus voluptatibus deserunt
-                        culpa in eos praesentium magni exercitationem officia,
-                        accusamus aliquid consequatur a harum assumenda iusto ut
-                        perspiciatis similique facere! Magnam nam enim sed
-                        explicabo! Eum facilis doloremque ipsam nemo, voluptate
-                        minima atque quibusdam recusandae accusantium quam,
-                        possimus sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati temporibus
+                        voluptatibus deserunt culpa in eos praesentium magni exercitationem officia, accusamus aliquid
+                        consequatur a harum assumenda iusto ut perspiciatis similique facere! Magnam nam enim sed
+                        explicabo! Eum facilis doloremque ipsam nemo, voluptate minima atque quibusdam recusandae
+                        accusantium quam, possimus sequi!
                       </p>
                     </div>
                   </div>
@@ -290,22 +254,14 @@
               <li class="portfolio__item" data-type="design">
                 <a class="portfolio__link link card" href="">
                   <div class="card__thumb">
-                    <img
-                      class="card__img"
-                      src="img/portfolio/img-6.jpg"
-                      alt="Видання Limited Edition"
-                      width="370"
-                    />
+                    <img class="card__img" src="img/portfolio/img-6.jpg" alt="Видання Limited Edition" width="370" />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis obcaecati temporibus voluptatibus deserunt
-                        culpa in eos praesentium magni exercitationem officia,
-                        accusamus aliquid consequatur a harum assumenda iusto ut
-                        perspiciatis similique facere! Magnam nam enim sed
-                        explicabo! Eum facilis doloremque ipsam nemo, voluptate
-                        minima atque quibusdam recusandae accusantium quam,
-                        possimus sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati temporibus
+                        voluptatibus deserunt culpa in eos praesentium magni exercitationem officia, accusamus aliquid
+                        consequatur a harum assumenda iusto ut perspiciatis similique facere! Magnam nam enim sed
+                        explicabo! Eum facilis doloremque ipsam nemo, voluptate minima atque quibusdam recusandae
+                        accusantium quam, possimus sequi!
                       </p>
                     </div>
                   </div>
@@ -319,22 +275,14 @@
               <li class="portfolio__item" data-type="marketing">
                 <a class="portfolio__link link card" href="">
                   <div class="card__thumb">
-                    <img
-                      class="card__img"
-                      src="img/portfolio/img-7.jpg"
-                      alt="Проєкт LAB"
-                      width="370"
-                    />
+                    <img class="card__img" src="img/portfolio/img-7.jpg" alt="Проєкт LAB" width="370" />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis obcaecati temporibus voluptatibus deserunt
-                        culpa in eos praesentium magni exercitationem officia,
-                        accusamus aliquid consequatur a harum assumenda iusto ut
-                        perspiciatis similique facere! Magnam nam enim sed
-                        explicabo! Eum facilis doloremque ipsam nemo, voluptate
-                        minima atque quibusdam recusandae accusantium quam,
-                        possimus sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati temporibus
+                        voluptatibus deserunt culpa in eos praesentium magni exercitationem officia, accusamus aliquid
+                        consequatur a harum assumenda iusto ut perspiciatis similique facere! Magnam nam enim sed
+                        explicabo! Eum facilis doloremque ipsam nemo, voluptate minima atque quibusdam recusandae
+                        accusantium quam, possimus sequi!
                       </p>
                     </div>
                   </div>
@@ -348,22 +296,14 @@
               <li class="portfolio__item" data-type="app">
                 <a class="portfolio__link link card" href="">
                   <div class="card__thumb">
-                    <img
-                      class="card__img"
-                      src="img/portfolio/img-8.jpg"
-                      alt="Growing Business"
-                      width="370"
-                    />
+                    <img class="card__img" src="img/portfolio/img-8.jpg" alt="Growing Business" width="370" />
                     <div class="card__overlay">
                       <p class="card__overlay-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis obcaecati temporibus voluptatibus deserunt
-                        culpa in eos praesentium magni exercitationem officia,
-                        accusamus aliquid consequatur a harum assumenda iusto ut
-                        perspiciatis similique facere! Magnam nam enim sed
-                        explicabo! Eum facilis doloremque ipsam nemo, voluptate
-                        minima atque quibusdam recusandae accusantium quam,
-                        possimus sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati temporibus
+                        voluptatibus deserunt culpa in eos praesentium magni exercitationem officia, accusamus aliquid
+                        consequatur a harum assumenda iusto ut perspiciatis similique facere! Magnam nam enim sed
+                        explicabo! Eum facilis doloremque ipsam nemo, voluptate minima atque quibusdam recusandae
+                        accusantium quam, possimus sequi!
                       </p>
                     </div>
                   </div>
@@ -381,81 +321,70 @@
 
       <footer class="footer">
         <div class="container">
-          <div class="footer__content">
-            <a class="footer__logo logo" href="/"><span>Web</span>Studio</a>
-            <address class="footer__address address-footer" id="contacts">
-              <ul class="address-footer__list">
-                <li class="address-footer__item">
-                  <a
-                    class="address-footer__link address-footer__link--map link"
-                    href="https://maps.app.goo.gl/SjsjAe57UmDZUiKMA"
-                    >м. Київ, пр-т Лесі Українки, 26</a
-                  >
+          <div class="footer__info">
+            <div class="footer__content">
+              <a class="footer__logo logo" href="/"><span>Web</span>Studio</a>
+              <address class="footer__address address-footer" id="contacts">
+                <ul class="address-footer__list">
+                  <li class="address-footer__item">
+                    <a
+                      class="address-footer__link address-footer__link--map link"
+                      href="https://maps.app.goo.gl/SjsjAe57UmDZUiKMA"
+                      >м. Київ, пр-т Лесі Українки, 26</a
+                    >
+                  </li>
+                  <li class="address-footer__item">
+                    <a class="address-footer__link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                  </li>
+                  <li class="address-footer__item">
+                    <a class="address-footer__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+
+            <div class="footer__social">
+              <strong class="footer__title">Приєднуйтесь</strong>
+              <ul class="footer__social-list social-list list">
+                <li class="social-list__item">
+                  <a class="social-list__link" href="">
+                    <svg width="20" height="20" class="social-list__icon">
+                      <use href="./img/sprite.svg#social-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="address-footer__item">
-                  <a
-                    class="address-footer__link link"
-                    href="mailto:info@devstudio.com"
-                    >info@devstudio.com</a
-                  >
+
+                <li class="social-list__item">
+                  <a class="social-list__link" href="">
+                    <svg width="20" height="20" class="social-list__icon">
+                      <use href="./img/sprite.svg#social-twitter"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="address-footer__item">
-                  <a class="address-footer__link link" href="tel:+380961111111"
-                    >+38 096 111 11 11</a
-                  >
+
+                <li class="social-list__item">
+                  <a class="social-list__link" href="">
+                    <svg width="20" height="20" class="social-list__icon">
+                      <use href="./img/sprite.svg#social-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social-list__item">
+                  <a class="social-list__link" href="">
+                    <svg width="20" height="20" class="social-list__icon">
+                      <use href="./img/sprite.svg#social-linkedin"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
-          </div>
-
-          <div class="footer__social">
-            <strong class="footer__title">Приєднуйтесь</strong>
-            <ul class="footer__social-list social-list list">
-              <li class="social-list__item">
-                <a class="social-list__link" href="">
-                  <svg width="20" height="20" class="social-list__icon">
-                    <use href="./img/sprite.svg#social-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="social-list__item">
-                <a class="social-list__link" href="">
-                  <svg width="20" height="20" class="social-list__icon">
-                    <use href="./img/sprite.svg#social-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="social-list__item">
-                <a class="social-list__link" href="">
-                  <svg width="20" height="20" class="social-list__icon">
-                    <use href="./img/sprite.svg#social-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="social-list__item">
-                <a class="social-list__link" href="">
-                  <svg width="20" height="20" class="social-list__icon">
-                    <use href="./img/sprite.svg#social-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
 
           <form class="footer__form">
             <strong class="footer__title">Підпишіться на розсилку</strong>
             <div class="footer__form-group">
-              <input
-                class="footer__input"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-                required
-              />
+              <input class="footer__input" type="email" name="email" id="email" placeholder="E-mail" required />
               <button class="footer__button button" type="submit">
                 Підписатися
                 <svg class="footer__icon" width="24" height="24">

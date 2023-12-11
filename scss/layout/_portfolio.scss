@@ -1,23 +1,43 @@
 .portfolio {
+  &__filter {
+    margin-bottom: 2.5rem;
+    @include mq($from: "tablet") {
+      margin-bottom: 1.875rem;
+    }
+    @include mq($from: "desktop") {
+      margin-bottom: 3.125rem;
+    }
+  }
   &__list {
-    --num-items: 3;
-    --gap: 2rem;
+    --num-items: 1;
+    --gap: 1.875rem;
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
+    justify-content: center;
+
+    @include mq($from: "tablet") {
+      --num-items: 2;
+      justify-content: flex-start;
+    }
+    @include mq($from: "desktop") {
+      --num-items: 3;
+    }
   }
   &__item {
-    width: calc(
-      (100% - var(--gap) * (var(--num-items) - 1)) / var(--num-items)
-    );
+    @include mq($from: "tablet") {
+      width: calc((100% - var(--gap) * (var(--num-items) - 1)) / var(--num-items));
+    }
   }
 }
 
 .filter {
-  margin-bottom: 3rem;
   display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 0.5rem;
+  @include mq($from: "tablet") {
+    justify-content: center;
+  }
 
   &__label {
     display: block;
@@ -38,20 +58,27 @@
       background-color: var(--color-text-accent);
       color: var(--color-text-secondary-title);
 
-      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-        0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+        0px 3px 1px 0px rgba(0, 0, 0, 0.1);
     }
   }
 }
 
 .card {
   font-family: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  --border: 1px solid #eee;
+  border-left: var(--border);
+  border-right: var(--border);
+  border-bottom: var(--border);
 
   &:hover,
   &:focus {
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
-      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 
     & .card__overlay {
       transform: translateY(0);
@@ -95,12 +122,7 @@
   }
 
   &__content {
-    --border: 1px solid #eee;
-
     padding: 1.25rem 1.5rem;
-    border-left: var(--border);
-    border-right: var(--border);
-    border-bottom: var(--border);
     background-color: var(--color-bg-primary);
   }
   &__name {
