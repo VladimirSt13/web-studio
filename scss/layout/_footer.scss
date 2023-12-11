@@ -1,0 +1,144 @@
+.footer {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  color: var(--color-text-secondary-title);
+
+  .container {
+    width: 100%;
+
+    @include mq($to: "desktop") {
+      max-width: 600px;
+    }
+
+    @include mq($from: "desktop") {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    @include mq($to: "desktop") {
+      text-align: center;
+    }
+  }
+
+  &__info {
+    @include mq($to: "desktop") {
+      margin-bottom: 3.75rem;
+    }
+
+    @include mq($from: "tablet") {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 1.25rem;
+
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.0262rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @include mq($to: "tablet") {
+      margin-bottom: 3.75rem;
+    }
+
+    .logo {
+      display: block;
+      color: var(--color-text-secondary-title);
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__social {
+    @include mq($from: "desktop") {
+      margin-left: 5.785rem;
+    }
+
+    .social-list__link {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--color-text-secondary-title);
+
+      transition: background-color var(--transition);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-text-accent);
+      }
+    }
+  }
+
+  &__form {
+    margin-left: auto;
+  }
+  &__form-group {
+    @include mq($from: "desktop") {
+      display: flex;
+      gap: 0.75rem;
+    }
+  }
+
+  &__input {
+    @include mq($to: "desktop") {
+      margin-bottom: 1.25rem;
+    }
+    width: 100%;
+    max-width: 450px;
+
+    @include mq($from: "desktop") {
+      width: 358px;
+    }
+    height: 50px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.25rem;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary-title);
+
+    &:focus {
+      border-color: var(--color-text-accent);
+    }
+  }
+
+  &__button {
+    @include mq($to: "desktop") {
+      margin: 0 auto;
+    }
+  }
+}
+
+.address-footer {
+  font-style: normal;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    color: var(--color-text-secondary-text);
+    line-height: 1.71; /* 171.429% */
+    letter-spacing: 0.0262rem;
+
+    transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--color-text-accent);
+    }
+  }
+
+  &__link--map {
+    color: var(--color-text-secondary-title);
+  }
+}

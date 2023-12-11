@@ -1,0 +1,89 @@
+.features {
+  &.section {
+    @include mq($from: "desktop") {
+      padding-bottom: 0;
+    }
+  }
+
+  @include mq($from: "tablet") {
+  }
+  @include mq($from: "desktop") {
+  }
+  &__list {
+    @include mq($from: "tablet") {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    @include mq($to: "tablet") {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include mq($from: "tablet") {
+      flex-basis: calc((100% - 4rem) / 2);
+    }
+    @include mq($from: "desktop") {
+      flex-basis: calc((100% - 8rem) / 4);
+    }
+  }
+}
+
+.feature {
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 2rem;
+
+    border-radius: 4px;
+
+    background-color: var(--color-bg-accent);
+
+    svg {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  &__body {
+  }
+
+  &__title {
+    margin-bottom: 0.625rem;
+    color: var(--color-text-primary-title);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.0262rem;
+
+    @include mq($to: "tablet") {
+      text-align: center;
+    }
+
+    @include mq($to: "desktop") {
+      font-size: 0.875rem;
+    }
+
+    @include mq($from: "tablet") {
+    }
+
+    @include mq($from: "desktop") {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__text {
+    color: var(--color-text-primary-text);
+    letter-spacing: 0.0262rem;
+    line-height: 1.71; /* 171.429% */
+
+    @include mq($to: "desktop") {
+      font-size: 0.875rem;
+    }
+  }
+}

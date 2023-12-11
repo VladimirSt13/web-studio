@@ -1,0 +1,34 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 10px 24px;
+
+  @include mq($from: "desktop") {
+    padding: 10px 32px;
+  }
+
+  border-radius: 4px;
+  background-color: var(--color-text-accent);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  color: var(--color-text-secondary-title);
+
+  font-family: inherit;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06rem;
+
+  cursor: pointer;
+  border: none;
+
+  transition: background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-text-accent-hover);
+  }
+}

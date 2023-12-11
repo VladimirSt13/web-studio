@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+[class*="container"] {
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 1rem;
+  max-width: 480px;
+
+  @include mq($from: "tablet") {
+    max-width: 768px;
+  }
+
+  @include mq($from: "desktop") {
+    max-width: 1200px;
+  }
+}
+
+.section {
+  padding-block: 3.75rem;
+
+  @include mq($from: "desktop") {
+    padding-block: 5.875rem;
+  }
+
+  &__title {
+    margin-bottom: 1.875rem;
+    color: var(--color-text-primary-title);
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.75rem;
+    letter-spacing: 0.0525rem;
+
+    @include mq($from: "desktop") {
+      margin-bottom: 3rem;
+
+      font-size: 2.25rem;
+      letter-spacing: 0.0675rem;
+    }
+  }
+}

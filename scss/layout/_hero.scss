@@ -1,0 +1,42 @@
+.hero {
+  background-color: var(--color-bg-grey);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    image-set(url("../img/hero/img.jpg") 1x, url("../img/hero/img@2x.jpg") 2x, url("../img/hero/img@3x.jpg") 3x);
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+
+  @include mq($from: "desktop") {
+    height: 600px;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__title {
+    max-width: 360px;
+
+    text-align: center;
+    color: var(--color-text-secondary-title);
+    font-size: 1.625rem;
+    font-weight: 900;
+    line-height: 1.62;
+    letter-spacing: 0.0975rem;
+    text-transform: uppercase;
+
+    @include mq($from: "desktop") {
+      max-width: 696px;
+      font-size: 2.75rem;
+      line-height: 1.36; /* 136.364% */
+      letter-spacing: 0.165rem;
+    }
+  }
+}

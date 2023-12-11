@@ -1,0 +1,61 @@
+.nav {
+  &__list {
+    @include mq($from: "tablet") {
+      display: flex;
+      column-gap: 3rem;
+      row-gap: 1rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @include mq($to: "tablet") {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: var(--color-text-primary-title);
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--color-text-accent);
+    }
+
+    @include mq($to: "tablet") {
+      font-size: 40px;
+    }
+
+    @include mq($from: "tablet") {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding-block: 2rem;
+
+      letter-spacing: 0.0175rem;
+    }
+
+    &--active {
+      color: var(--color-text-accent);
+
+      @include mq($from: "tablet") {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: var(--color-text-accent);
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}

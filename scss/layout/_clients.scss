@@ -1,0 +1,54 @@
+.clients {
+  &__list {
+    --gap: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  &__item {
+    width: calc((100% - (var(--n) - 1) * var(--gap)) / var(--n));
+
+    height: 92px;
+
+    --n: 2;
+
+    @include mq($to: "extra-small") {
+      --n: 1;
+    }
+
+    @include mq($from: "tablet") {
+      --n: 3;
+    }
+    @include mq($from: "desktop") {
+      --n: 6;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    border-radius: 0.25rem;
+    border: 1px solid #afb1b8;
+
+    color: var(--color-grey-secondary);
+
+    transition: border-color var(--transition), color var(--transition);
+
+    &:hover,
+    &:focus {
+      border-color: var(--color-text-accent);
+      color: var(--color-text-accent);
+    }
+  }
+}

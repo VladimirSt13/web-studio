@@ -1,0 +1,33 @@
+.header-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+
+  // .header-social__item
+  &__item {
+    &:not(:last-child) {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -0.5rem;
+        width: 1px;
+        height: 100%;
+        background: rgba(33, 33, 33, 0.2);
+      }
+    }
+  }
+  // .header-social__link
+  &__link {
+    color: var(--color-text-accent);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2222; /* 122.222% */
+    letter-spacing: 0.0225rem;
+  }
+
+  @include mq($from: "tablet") {
+    display: none;
+  }
+}
