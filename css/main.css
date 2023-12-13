@@ -1300,6 +1300,12 @@ img {
   -webkit-transform: translate(-50%, -50%) scale(0.5);
           transform: translate(-50%, -50%) scale(0.5);
 }
+@media screen and (width < 1200px) {
+  .backdrop.is-hidden .modal {
+    -webkit-transform: translate(0, 0) scale(0.5);
+            transform: translate(0, 0) scale(0.5);
+  }
+}
 .backdrop .modal {
   padding: 2.5rem;
   max-width: 450px;
@@ -1319,7 +1325,7 @@ img {
   transition: transform var(--transition);
   transition: transform var(--transition), -webkit-transform var(--transition);
 }
-@media screen and (orientation: landscape) {
+@media screen and (width < 1200px) {
   .backdrop .modal {
     position: relative;
     top: 0;

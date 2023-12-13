@@ -19,6 +19,9 @@
 
     .modal {
       transform: translate(-50%, -50%) scale(0.5);
+      @media screen and (width < $desktop) {
+        transform: translate(0, 0) scale(0.5);
+      }
     }
   }
 
@@ -32,7 +35,7 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    @media screen and (orientation: landscape) {
+    @media screen and (width < $desktop) {
       position: relative;
       top: 0;
       left: 0;
